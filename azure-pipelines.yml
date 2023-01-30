@@ -1,10 +1,10 @@
 trigger:
   - '*'
   
-  pool:
+pool:
     vmImage: 'ubuntu-22.04'
   
-  steps:
+steps:
   - task: UseDotNet@2
     displayName: 'Use .NET SDK 6.x'
     inputs:
@@ -50,4 +50,3 @@ trigger:
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Artifact: drop'
     condition: succeeded()
-    
